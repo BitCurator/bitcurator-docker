@@ -10,6 +10,10 @@
 
 This repository contains the source files for the docker that uses the BitCurator CLI to generate an addon installation of the toolset. Since Ubuntu Focal (20.04) is still in LTS, this docker is built using that image. The Jammy (22.04) version is not yet supported, as SaltStack does not have a 22.04-supported release, and as such there are a few 'Macgyver-isms' to get it to work properly. Once SaltStack supports Jammy, this will be updated.
 
+## Images:
+
+Images built using the files in this repository can be found at our [Docker Hub](https://hub.docker.com/r/bitcurator/bitcurator)
+
 ## Usage:
 
 First, this docker supports X11 forwarding. If using the ```docker-compose.yaml``` file below, modify it accordingly and run:
@@ -22,7 +26,7 @@ Once the docker is up, if you did not modify the IP/Port mappings below, run the
 
 This compose file has port host-port 33 mapped to image-port 22 to avoid conflicts with any SSH server/service running on host-port 22.
 
-**Acknowledgement:**
+## Acknowledgement:
 
 Developed for the BitCurator community by @digitalsleuth (https://hub.docker.com/u/digitalsleuth)
 
@@ -33,3 +37,4 @@ The BitCurator environment is a product of the BitCurator team housed at the Sch
 Ongoing support for the BitCurator environment is managed by the BitCurator Consortium. Find out more at:
 
 http://www.bitcuratorconsortium.net/
+
