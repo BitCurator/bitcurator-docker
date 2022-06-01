@@ -1,0 +1,35 @@
+FROM ubuntu:20.04
+
+LABEL version="1.0"
+LABEL description="BitCurator Docker based on Ubuntu 20.04 LTS"
+LABEL maintainer="https://github.com/bitcurator/bitcurator-docker"
+ARG BITCURATOR_CLI=v0.0.4
+ARG BITCURATOR_VERSION=v3.0.1
+
+ENV TERM linux
+
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get upgrade -y && apt-get install sudo git nano curl wget gnupg -y
+RUN wget -nv -O - https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest/salt-archive-keyring.gpg | apt-key add - && \
+echo deb [arch=amd64] https://repo.saltproject.io/py3/ubuntu/20.04/amd64/3004 focal main > /etc/apt/sources.list.d/saltstack.list && \
+apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y --allow-change-held-packages salt-common
+
+RUN curl -Lo /usr/local/bin/bitcurator https://github.com/bitcurator/bitcurator-cli/releases/download/${BITCURATOR_CLI}/bitcurator-cli-linux && \
+chmod +x /usr/local/bin/bitcurator
+
+RUN groupadd -r bcadmin && \
+useradd -r -g bcadmin -d /home/bcadmin -s /bin/bash -c "BitCurator User" bcadmin && \
+mkdir /home/bcadmin && \
+chown -R bcadmin:bcadmin /home/bcadmin && \
+usermod -a -G sudo bcadmin && \
+echo 'bcadmin:bcadmin' | chpasswd
+
+RUN DEBIAN_FRONTEND=noninteractive sudo bitcurator install --mode=addon --user=bcadmin --version=${BITCURATOR_VERSION}
+RUN rm -rf /var/cache/salt/* && \
+rm -rf /srv/* && \
+rm -rf /root/.cache/*
+
+WORKDIR /home/bcadmin
+
+RUN mkdir /var/run/sshd
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
