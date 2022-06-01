@@ -12,7 +12,7 @@ This repository contains the source files for the docker that uses the BitCurato
 
 ## Images:
 
-Images built using the files in this repository can be found at our [Docker Hub](https://hub.docker.com/r/bitcurator/bitcurator)
+Images built using the files in this repository can be found at our [Docker Hub](https://hub.docker.com/r/bitcurator/bitcurator).
 
 ## Usage:
 
@@ -28,7 +28,7 @@ This compose file has port host-port 33 mapped to image-port 22 to avoid conflic
 
 ## Acknowledgement:
 
-Developed for the BitCurator community by @digitalsleuth (https://hub.docker.com/u/digitalsleuth)
+Developed for the BitCurator community by [@digitalsleuth](https://github.com/digitalsleuth).
 
 ## Development Team and Support
 
