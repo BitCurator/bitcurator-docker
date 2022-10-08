@@ -8,7 +8,7 @@
 
 ## Description:
 
-This repository contains the source files for the docker that uses the BitCurator CLI to generate an addon installation of the toolset. Since Ubuntu Focal (20.04) is still in LTS, this docker is built using that image. The Jammy (22.04) version is not yet supported, as SaltStack does not have a 22.04-supported release, and as such there are a few 'Macgyver-isms' to get it to work properly. Once SaltStack supports Jammy, this will be updated.
+This repository contains the source files for the docker that uses the BitCurator CLI to generate an addon installation of the toolset. Both Jammy (22.04) and Focal (20.04) LTS versions of Ubuntu are supported by the CLI. However, the files in this repository are configured by default to build images using 22.04 with SaltStack release 3005. If you wish to build an image using 20.04, you will need to modify them.
 
 ## Images:
 
@@ -16,9 +16,9 @@ Images built using the files in this repository can be found at our [Docker Hub]
 
 ## Usage:
 
-First, this docker supports X11 forwarding. If using the ```docker-compose.yaml``` file below, modify it accordingly and run:
+First, this docker supports X11 forwarding. If using the ```docker-compose.yaml``` file below, modify it as required and run:
 
-```sudo docker-compose up -d``` from the directory containing the compose file.
+```sudo docker compose up -d``` from the directory containing the compose file.
 
 Once the docker is up, if you did not modify the IP/Port mappings below, run the following:
 
