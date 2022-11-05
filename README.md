@@ -12,7 +12,7 @@ This repository contains the source files for the docker that uses the BitCurato
 
 ## Images:
 
-Images built using the files in this repository can be found at our [Docker Hub](https://hub.docker.com/r/bitcurator/bitcurator).
+[Download the latest release from our Docker Hub](https://hub.docker.com/r/bitcurator/bitcurator).
 
 ## Usage:
 
