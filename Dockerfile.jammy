@@ -4,7 +4,7 @@ LABEL version="2.0"
 LABEL description="BitCurator Docker based on Ubuntu 22.04 LTS"
 LABEL maintainer="https://github.com/bitcurator/bitcurator-docker"
 ARG BITCURATOR_CLI=v1.0.0
-ARG BITCURATOR_VERSION=v4.2.1
+ARG BITCURATOR_VERSION=v4.4.0
 
 ENV TERM linux
 
