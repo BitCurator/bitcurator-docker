@@ -36,5 +36,5 @@ The BitCurator environment is a product of the BitCurator team housed at the Sch
 
 Ongoing support for the BitCurator environment is managed by the BitCurator Consortium. Find out more at:
 
-http://www.bitcuratorconsortium.net/
+http://www.bitcuratorconsortium.org/
 
