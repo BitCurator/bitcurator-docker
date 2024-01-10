@@ -4,7 +4,6 @@
 
 [![GitHub issues](https://img.shields.io/github/issues/bitcurator/bitcurator-docker.svg)](https://github.com/bitcurator/bitcurator-docker/issues)
 [![GitHub forks](https://img.shields.io/github/forks/bitcurator/bitcurator-docker.svg)](https://github.com/bitcurator/bitcurator-docker/network)
-[![Twitter Follow](https://img.shields.io/twitter/follow/bitcurator.svg?style=social&label=Follow)](https://twitter.com/bitcurator)
 
 ## Description:
 
