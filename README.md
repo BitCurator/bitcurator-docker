@@ -5,15 +5,15 @@
 [![GitHub issues](https://img.shields.io/github/issues/bitcurator/bitcurator-docker.svg)](https://github.com/bitcurator/bitcurator-docker/issues)
 [![GitHub forks](https://img.shields.io/github/forks/bitcurator/bitcurator-docker.svg)](https://github.com/bitcurator/bitcurator-docker/network)
 
-## Description:
+## Description
 
-This repository contains the source files for the docker that uses the BitCurator CLI to generate an addon installation of the toolset. Both Jammy (22.04) and Focal (20.04) LTS versions of Ubuntu are supported by the CLI. However, the files in this repository are configured by default to build images using 22.04 with SaltStack release 3005. If you wish to build an image using 20.04, you will need to modify them.
+This repository contains the source files for a docker container that uses the BitCurator CLI to generate an addon installation of the toolset. Both Jammy (22.04) and Focal (20.04) LTS versions of Ubuntu are supported by the CLI. However, the files in this repository are configured by default to build images using 22.04 with SaltStack release 3005. If you wish to build an image using 20.04, you will need to modify them.
 
-## Images:
+## Images
 
 [Download the latest release from our Docker Hub](https://hub.docker.com/r/bitcurator/bitcurator).
 
-## Usage:
+## Usage
 
 First, this docker supports X11 forwarding. If using the ```docker-compose.yaml``` file below, modify it as required and run:
 
@@ -25,7 +25,7 @@ Once the docker is up, if you did not modify the IP/Port mappings below, run the
 
 This compose file has port host-port 33 mapped to image-port 22 to avoid conflicts with any SSH server/service running on host-port 22.
 
-## Acknowledgement:
+## Acknowledgement
 
 Developed for the BitCurator community by [@digitalsleuth](https://github.com/digitalsleuth).
 
@@ -33,7 +33,7 @@ Developed for the BitCurator community by [@digitalsleuth](https://github.com/di
 
 The BitCurator environment is a product of the BitCurator team housed at the School of Information and Library Science at the University of North Carolina at Chapel Hill. Funding between 2011 and 2014 was provided by the Andrew W. Mellon Foundation.
 
-Ongoing support for the BitCurator environment is managed by the BitCurator Consortium. Find out more at:
+Community support is managed by the BitCurator Consortium. Find out more at:
 
 http://www.bitcuratorconsortium.org/
 
