@@ -1,7 +1,7 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 LABEL version="3.0"
-LABEL description="BitCurator Docker based on Ubuntu 22.04 LTS"
+LABEL description="BitCurator Docker based on Ubuntu 24.04 LTS"
 LABEL maintainer="https://github.com/bitcurator/bitcurator-docker"
 ARG BITCURATOR_CLI=v2.0.0
 ARG BITCURATOR_VERSION=v4.5.0
