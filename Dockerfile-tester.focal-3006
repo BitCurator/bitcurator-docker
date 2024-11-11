@@ -1,0 +1,16 @@
+FROM ubuntu:20.04
+
+RUN \
+  apt-get update && \
+  apt-get install -y wget nano gnupg && \
+  wget -O /usr/share/keyrings/salt-archive-keyring.pgp https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public && \
+  echo "deb [signed-by=/usr/share/keyrings/salt-archive-keyring.pgp] https://packages.broadcom.com/artifactory/saltproject-deb/ stable main" | tee /etc/apt/sources.list.d/saltstack.list && \
+  apt-get update && apt-get upgrade -y && \
+  apt-get install -y salt-common=3006.9 && \
+  mkdir -p /etc/salt && \
+  echo "file_client: local" > /etc/salt/minion && \
+  unset DEBIAN_FRONTEND
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+ENV LANGUAGE=C.UTF-8
+ENV LC_TIME=C.UTF-8
