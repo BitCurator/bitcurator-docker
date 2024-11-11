@@ -1,18 +1,10 @@
 FROM ubuntu:22.04
 
-<<<<<<< HEAD
 LABEL version="3.0"
 LABEL description="BitCurator Docker based on Ubuntu 22.04 LTS"
 LABEL maintainer="https://github.com/bitcurator/bitcurator-docker"
 ARG BITCURATOR_CLI=v2.0.0
 ARG BITCURATOR_VERSION=v4.5.0
-=======
-LABEL version="2.0.1"
-LABEL description="Generates a BitCurator Docker container with Ubuntu 22.04 LTS"
-LABEL maintainer="https://github.com/bitcurator/bitcurator-docker"
-ARG BITCURATOR_CLI=v1.0.0
-ARG BITCURATOR_VERSION=4.4.4
->>>>>>> 0b1c50f2bea8ef1be6aa73e4e2c9dc51ebcbc337
 
 ENV TERM=linux
 RUN apt-get update && apt-get install nano wget curl gnupg sudo -y && \
