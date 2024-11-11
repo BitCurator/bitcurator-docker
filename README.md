@@ -7,12 +7,8 @@
 
 ## Description
 
-<<<<<<< HEAD
 This repository contains the source files for the docker that uses the BitCurator CLI to generate an addon installation of the toolset. Noble (24.04),  Jammy (22.04) and Focal (20.04) LTS versions of Ubuntu are supported by the CLI. 
 The files in this repository are configured by default to build images using SaltStack release matching that of the BitCurator CLI.
-=======
-This repository contains the source files for a docker container that uses the BitCurator CLI to generate an addon installation of the toolset. Both Jammy (22.04) and Focal (20.04) LTS versions of Ubuntu are supported by the CLI. However, the files in this repository are configured by default to build images using 22.04 with SaltStack release 3005. If you wish to build an image using 20.04, you will need to modify them.
->>>>>>> 0b1c50f2bea8ef1be6aa73e4e2c9dc51ebcbc337
 
 ## Images
 
